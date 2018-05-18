@@ -23,16 +23,21 @@ $api->version('v1',function($api){
   });
   // Default_Controller
   $api->get('categories','App\Http\Controllers\CategoryController@index');
+  $api->get('books','App\Http\Controllers\BookController@index');
 
   // read
   $api->get('categories/{id}','App\Http\Controllers\CategoryController@show');
+  $api->get('books/{id}','App\Http\Controllers\BookController@show');
 
   // Creat
   $api->post('categories','App\Http\Controllers\CategoryController@store');
+  $api->post('books','App\Http\Controllers\BookController@store');
 
   // Update
   $api->put('categories/{id}','App\Http\Controllers\CategoryController@update');
+  $api->put('books/{id}','App\Http\Controllers\BookController@update');
 
   // Delete
   $api->delete('categories/{id}','App\Http\Controllers\CategoryController@destroy');
+  $api->delete('books/{id}','App\Http\Controllers\BookController@destroy');
 });

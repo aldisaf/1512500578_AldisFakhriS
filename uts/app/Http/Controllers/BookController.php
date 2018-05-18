@@ -114,7 +114,7 @@ class BookController extends Controller
                     'isbn' => $data['isbn'],
                     'synopsis' => $data['synopsis'],
                     'publisher' => $data['publisher'],
-                    'author' => $data['country']
+                    'author' => $data['author']
                   ]);
                 try{
                   $update->update();
